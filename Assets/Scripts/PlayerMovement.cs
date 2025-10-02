@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     private bool jumpBuffered = false;
     private bool isTechnicallyGrounded = true;
     private bool wasJustGrounded = true;
-    private Coroutine cayotee;
+    private Coroutine coyote;
 
     //[SerializeField] private AudioSource soundSource;
     //[SerializeField] private AudioClip walkingSound;
@@ -52,8 +52,8 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (wasJustGrounded)
         {
-            if(cayotee!=null) StopCoroutine(cayotee);
-            cayotee = StartCoroutine(CayoteeJump());
+            if(coyote != null) StopCoroutine(coyote);
+            coyote = StartCoroutine(CoyoteJump());
         }
         if (Input.GetButtonDown("Jump") && isTechnicallyGrounded) jumpBuffered = true;
     }
@@ -97,7 +97,7 @@ public class PlayerMovement : MonoBehaviour
     }*/
 
     //Makes it so that if the player has just fell from a platform, they can still jump for a short timeframe after, despite not actually being grounded
-    private IEnumerator CayoteeJump()
+    private IEnumerator CoyoteJump()
     {
         wasJustGrounded = false;
         yield return new WaitForSeconds(0.2f);

@@ -1,0 +1,101 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\KORR\\Project KORR\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BB545A8B-136A-8459-2A85-12F56F04D85B}|Assembly-CSharp.csproj|d:\\korr\\project korr\\assets\\scripts\\camerarotation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB545A8B-136A-8459-2A85-12F56F04D85B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\camerarotation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB545A8B-136A-8459-2A85-12F56F04D85B}|Assembly-CSharp.csproj|D:\\KORR\\Project KORR\\assets\\scripts\\headbobcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB545A8B-136A-8459-2A85-12F56F04D85B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\headbobcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB545A8B-136A-8459-2A85-12F56F04D85B}|Assembly-CSharp.csproj|D:\\KORR\\Project KORR\\assets\\scripts\\interaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB545A8B-136A-8459-2A85-12F56F04D85B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB545A8B-136A-8459-2A85-12F56F04D85B}|Assembly-CSharp.csproj|D:\\KORR\\Project KORR\\assets\\scripts\\iinteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB545A8B-136A-8459-2A85-12F56F04D85B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\iinteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB545A8B-136A-8459-2A85-12F56F04D85B}|Assembly-CSharp.csproj|D:\\KORR\\Project KORR\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB545A8B-136A-8459-2A85-12F56F04D85B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CameraRotation.cs",
+              "DocumentMoniker": "D:\\KORR\\Project KORR\\Assets\\Scripts\\CameraRotation.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CameraRotation.cs",
+              "ToolTip": "D:\\KORR\\Project KORR\\Assets\\Scripts\\CameraRotation.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CameraRotation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T09:52:12.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HeadBobController.cs",
+              "DocumentMoniker": "D:\\KORR\\Project KORR\\Assets\\Scripts\\HeadBobController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\HeadBobController.cs",
+              "ToolTip": "D:\\KORR\\Project KORR\\Assets\\Scripts\\HeadBobController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\HeadBobController.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAE4AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T09:51:38.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Interaction.cs",
+              "DocumentMoniker": "D:\\KORR\\Project KORR\\Assets\\Scripts\\Interaction.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Interaction.cs",
+              "ToolTip": "D:\\KORR\\Project KORR\\Assets\\Scripts\\Interaction.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Interaction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T09:45:58.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IInteractable.cs",
+              "DocumentMoniker": "D:\\KORR\\Project KORR\\Assets\\Scripts\\IInteractable.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\IInteractable.cs",
+              "ToolTip": "D:\\KORR\\Project KORR\\Assets\\Scripts\\IInteractable.cs",
+              "RelativeToolTip": "Assets\\Scripts\\IInteractable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T09:45:56.148Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PlayerMovement.cs",
+              "DocumentMoniker": "D:\\KORR\\Project KORR\\Assets\\Scripts\\PlayerMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMovement.cs",
+              "ToolTip": "D:\\KORR\\Project KORR\\Assets\\Scripts\\PlayerMovement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerMovement.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAGkAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T09:45:43.64Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

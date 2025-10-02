@@ -4,14 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-//Responsible for playable chrachter movement, such as walking, sprinting and jumping
+//Responsible for playable charachter movement, such as walking, sprinting and jumping
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float speed = 1.5f;
     [SerializeField] private float movementAcceleration = 1;
     [SerializeField] private float gravity = 9.8f;
-    [SerializeField] private float jumpStrength = 0.17f;
+    [SerializeField] private float jumpStrength = 0.15f;
     private CharacterController _char;
 
     private float speedMultiplier=1.0f;
@@ -19,6 +19,10 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 lastMovement;
     private float VerticalSpeed = 0;
+    private bool jumpBuffered = false;
+    private bool isTechnicallyGrounded = true;
+    private bool wasJustGrounded = true;
+    private Coroutine cayotee;
 
     //[SerializeField] private AudioSource soundSource;
     //[SerializeField] private AudioClip walkingSound;
@@ -31,29 +35,39 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Update()
     {
-
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speedMultiplier = 2.2f;
+            isRunning = true;
+        }
+        else
+        {
+            isRunning = false;
+        }
+        
+        if (_char.isGrounded)
+        {
+            isTechnicallyGrounded = true;
+            wasJustGrounded = true;
+        }
+        else if (wasJustGrounded)
+        {
+            if(cayotee!=null) StopCoroutine(cayotee);
+            cayotee = StartCoroutine(CayoteeJump());
+        }
+        if (Input.GetButtonDown("Jump") && isTechnicallyGrounded) jumpBuffered = true;
     }
     void FixedUpdate()
     {
         if (!IsPaused)
         {
-            if (Input.GetKey(KeyCode.LeftShift))
-            {
-                speedMultiplier = 2.2f;
-                isRunning = true;
-            }
-            else
-            {
-                isRunning = false;
-            }
-
-
             CalculateVerticalSpeed();
             MovePlayer();
             speedMultiplier = 1.0f;
 
-            //All of the commented-out code is reponsible for playing footstep sounds. This code is a leftover from my previous project, so it might not work as intend
-            //However I still decided to leave in case it might be useful in the future
+//All of the commented-out code is reponsible for playing footstep sounds. This code is a leftover from my previous project, so it might not work as intended
+//However I still decided to leave in case it might be useful in the future
+
             /*float nowSpeed = new Vector3(_char.velocity.x, 0, _char.velocity.z).magnitude;
             if (nowSpeed >= 0.6f)
             {
@@ -82,18 +96,27 @@ public class PlayerMovement : MonoBehaviour
         }
     }*/
 
+    //Makes it so that if the player has just fell from a platform, they can still jump for a short timeframe after, despite not actually being grounded
+    private IEnumerator CayoteeJump()
+    {
+        wasJustGrounded = false;
+        yield return new WaitForSeconds(0.2f);
+        isTechnicallyGrounded = false;
+    }
+
     //Calculates player's vertical velocity
     private void CalculateVerticalSpeed()
     {
-        VerticalSpeed -= gravity * 0.0017f;
+        VerticalSpeed -= gravity * 0.001f;
         VerticalSpeed = Mathf.Max(VerticalSpeed, -0.45f);
-        if (Input.GetButton("Jump") && _char.isGrounded)
+        if (jumpBuffered)
         {
+            jumpBuffered = false;
             VerticalSpeed = jumpStrength;
         }
         else if (_char.isGrounded)
         {
-            VerticalSpeed = -gravity * 0.0017f;
+            VerticalSpeed = -gravity * 0.001f;
         }
     }
 
